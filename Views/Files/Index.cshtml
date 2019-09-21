@@ -1,0 +1,15 @@
+@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Text Files";
+}
+
+<ul>
+    @foreach(var item in Model) {
+        <li><a  asp-controller="Files"
+                asp-action="Content"
+                asp-route-filename="@item"
+                >@item
+        </a></li>
+    }
+</ul>
